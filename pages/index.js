@@ -3,23 +3,23 @@ import Link from 'next/link'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
-const IndexPage = ({ stringToDisplay }) => (
+const IndexPage = () => (
   <>
     <Nav />
     <Link href="/contact"><a className="nav-link">Contact Us</a></Link>
-    <p>{stringToDisplay}</p>
+    <p>{'Hello World'}</p>
     <Footer />
   </>
 )
 
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:4000/getData')
-  const data = await res.json()
-  return {
-    props: {
-      ...data,
-    }
-  }
-}
+// export async function getServerSideProps() {
+//   const res = await fetch('http://localhost:4000/getData')
+//   const data = await res.json()
+//   return {
+//     props: {
+//       ...data,
+//     }
+//   }
+// }
 
 export default IndexPage

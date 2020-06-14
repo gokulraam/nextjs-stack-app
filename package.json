@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "runServer": "node ./data/server.js"
+    "runServer": "node ./data/server.js",
+    "runApp": "concurrently \"npm:build\" \"npm:start\""
   },
   "author": "",
   "dependencies": {
